@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      const ROOM_ID = "<%= roomId %>";
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Hello <span id="your-name">Your Name</span></h1>
+      </header>
+      <section id="error-msg">
+        <h2>Error</h2>
+        <p id="error-text">An Error Has Occured</p>
+      </section>
+      <section id="controller">
+        <h2>It Is Your Turn. What is your Guess?</h2>
+        <button class="controller-btn" id="higher-btn">Higher</button>
+        <button class="controller-btn" id="lower-btn">Lower</button>
+      </section>
+      <section id="enter-name">
+        <h2>Please Enter Your Name.</h2>
+        <input type="text" name="name" id="name-field" />
+        <button class="controller-btn" id="enter-name-btn">Submit</button>
+      </section>
+      <section id="simple-msg">
+        <h2>Please Wait</h2>
+      </section>
+    </div>
+    <script
+      src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"
+      defer
+    ></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="/js/game.js" defer></script>
+  </body>
+</html>
